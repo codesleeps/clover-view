@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://cloverviewlandscapedesigns.co.uk/sitemap.xml
+
+# Disallow admin areas (if any)
+Disallow: /admin/
+Disallow: /.git/
+
+# Allow important pages
+Allow: /index.html
+Allow: /success.html
+Allow: /images/

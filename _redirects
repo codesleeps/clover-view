@@ -1,0 +1,8 @@
+# Netlify redirects file
+
+# Redirect HTTP to HTTPS
+http://cloverviewlandscapedesigns.netlify.app/* https://cloverviewlandscapedesigns.netlify.app/:splat 301!
+http://www.cloverviewlandscapedesigns.netlify.app/* https://cloverviewlandscapedesigns.netlify.app/:splat 301!
+
+# Handle SPA routing (if needed)
+/*    /index.html   200

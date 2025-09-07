@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX', {
+            'page_title': 'Clover View Landscape Designs - Professional Gardening Services',
+            'custom_map': {
+                'dimension1': 'service_type',
+                'dimension2': 'location'
+            }
+        });
+
+        // Track form submissions
+        document.addEventListener('DOMContentLoaded', function () {
+            const forms = document.querySelectorAll('form');
+            forms.forEach(form => {
+                form.addEventListener('submit', function () {
+                    gtag('event', 'form_submit', {
+                        'event_category': 'engagement',
+                        'event_label': form.id || 'contact_form'
+                    });
+                });
+            });
+
+            // Track phone number clicks
+            const phoneLinks = document.querySelectorAll('a[href^="tel:"]');
+            phoneLinks.forEach(link => {
+                link.addEventListener('click', function () {
+                    gtag('event', 'phone_click', {
+                        'event_category': 'engagement',
+                        'event_label': 'phone_contact'
+                    });
+                });
+            });
+        });
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <title>Clover View Landscape Designs - Award-Winning Gardening Services Birmingham, Coventry, West Midlands</title>
+
+    <!-- GitHub Pages Meta -->
+    <meta name="github-repo" content="https://codesleeps.github.io/bg_services/">
+    <meta name="github-pages" content="true">
+    <meta name="description"
+        content="Professional gardening services in Birmingham, Coventry & West Midlands. Grass cutting, hedge trimming, power washing, turf laying. Award-winning, carbon neutral. Call 0121 XXX XXXX">
+
+    <!-- Local SEO Meta Tags -->
+    <meta name="keywords"
+        content="gardening services Birmingham, lawn care Coventry, hedge cutting West Midlands, power washing Birmingham, turf laying Coventry, garden clearance West Midlands, landscaping Birmingham">
+    <meta name="geo.region" content="GB-WMD">
+    <meta name="geo.placename" content="West Midlands, Birmingham, Coventry">
+    <meta name="geo.position" content="52.4862;-1.8904">
+    <meta name="ICBM" content="52.4862, -1.8904">
+
+    <!-- Open Graph for Social Media -->
+    <meta property="og:title" content="Clover View Landscape Designs - Professional Gardening Services West Midlands">
+    <meta property="og:description"
+        content="Award-winning gardening services in Birmingham, Coventry & West Midlands. Grass cutting, hedge maintenance, power washing, turf laying.">
+    <meta property="og:type" content="business.business">
+    <meta property="og:url" content="https://cloverviewlandscapedesigns.co.uk">
+    <meta property="og:locale" content="en_GB">
+    <meta property="business:contact_data:locality" content="Birmingham">
+    <meta property="business:contact_data:region" content="West Midlands">
+    <meta property="business:contact_data:country_name" content="United Kingdom">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Clover View Landscape Designs - Professional Gardening Services West Midlands">
+    <meta name="twitter:description"
+        content="Award-winning gardening services in Birmingham, Coventry & West Midlands.">
+
+    <!-- Critical CSS inline -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box
+        }
+
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #fff
+        }
+
+        .header {
+            background: #fff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px
+        }
+
+        .logo h1 {
+            color: #2d5016;
+            font-size: 1.8rem;
+            font-weight: 700
+        }
+
+        .hero {
+            margin-top: 80px;
+            position: relative;
+            min-height: 100vh;
+            background: linear-gradient(rgba(45, 80, 22, 0.7), rgba(45, 80, 22, 0.7)), url('./images/Garden-turfing.jpg') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(45, 80, 22, 0.7);
+            z-index: 1
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 1200px;
+            padding: 0 20px;
+            text-align: center
+        }
+
+        .hero-text h1 {
+            font-size: 4rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3)
+        }
+
+        @media (max-width:768px) {
+            .hero-text h1 {
+                font-size: 2.8rem
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="styles.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Preload critical resources -->
+    <link rel="preload" as="image" href="images/Garden-turfing.jpg" fetchpriority="high">
+    <link rel="preload" href="styles.css" as="style">
+
+    <!-- Structured Data for Local Business -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "@id": "https://cloverviewlandscapedesigns.co.uk",
+        "name": "GreenCare Gardens",
+        "alternateName": "GreenCare Gardens West Midlands",
+        "description": "Award-winning residential gardening services across the West Midlands. Professional grass cutting, hedge maintenance, power washing, turf laying and garden clearance.",
+        "url": "https://cloverviewlandscapedesigns.co.uk",
+        "telephone": "0121-XXX-XXXX",
+        "email": "info@cloverviewlandscapedesigns.co.uk",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Birmingham",
+            "addressRegion": "West Midlands",
+            "addressCountry": "GB"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "52.4862",
+            "longitude": "-1.8904"
+        },
+        "areaServed": [
+            {
+                "@type": "City",
+                "name": "Birmingham"
+            },
+            {
+                "@type": "City", 
+                "name": "Coventry"
+            },
+            {
+                "@type": "City",
+                "name": "Wolverhampton"
+            },
+            {
+                "@type": "City",
+                "name": "Solihull"
+            },
+            {
+                "@type": "City",
+                "name": "Walsall"
+            },
+            {
+                "@type": "City",
+                "name": "Dudley"
+            }
+        ],
+        "serviceType": [
+            "Grass Cutting and Mowing",
+            "Hedge Cutting and Maintenance", 
+            "Weed Control and Management",
+            "Turf Laying",
+            "Power Washing",
+            "Garden Clearance and Disposal"
+        ],
+        "priceRange": "££",
+        "openingHours": [
+            "Mo-Fr 08:00-18:00",
+            "Sa 08:00-16:00"
+        ],
+        "paymentAccepted": "Cash, Credit Card, Bank Transfer",
+        "currenciesAccepted": "GBP",
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Gardening Services",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Grass Cutting and Mowing",
+                        "description": "Professional lawn maintenance with precision cutting and treatment services"
+                    }
+                },
+                {
+                    "@type": "Offer", 
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Hedge Cutting and Maintenance",
+                        "description": "Expert hedge trimming and shaping services"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service", 
+                        "name": "Power Washing",
+                        "description": "High-pressure cleaning for patios, driveways and outdoor surfaces"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Turf Laying",
+                        "description": "Professional turf installation for instant lawn transformation"
+                    }
+                }
+            ]
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "127",
+            "bestRating": "5",
+            "worstRating": "1"
+        },
+        "sameAs": [
+            "https://www.facebook.com/cloverviewlandscapedesigns",
+            "https://www.instagram.com/cloverviewlandscapedesigns"
+        ]
+    }
+    </script>
+    <script>
+        window.addEventListener('load', function () {
+            setTimeout(function () {
+                var s1 = document.createElement("script");
+                s1.defer = true;
+                s1.src = 'https://embed.tawk.to/64d436ee94cf5d49dc697d83/1h7efd55m';
+                s1.charset = 'UTF-8';
+                s1.setAttribute('crossorigin', '*');
+                document.body.appendChild(s1);
+            }, 5000); // Delay by 5 seconds after load
+        });
+    </script>
+
+</head>
+
+<body>
+    <!-- Accessibility: Skip to Main Content -->
+    <a href="#main-content" class="skip-link" tabindex="0">Skip to main content</a>
+    <!-- Back to Top Button -->
+    <button id="backToTop" title="Back to Top">&#8679;</button>
+    <header class="header" role="banner">
+        <nav class="nav" role="navigation" aria-label="Main Navigation">
+            <div class="nav-container">
+                <div class="logo">
+                    <h1>Clover View Landscape Designs</h1>
+                    <span class="tagline">Community Award-Winning Garden Care</span>
+                </div>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main role="main" id="main-content">
+        <section id="home" class="hero">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Birmingham & West Midlands Award-Winning Gardening Services</h1>
+                    <p>Professional residential gardening services across Birmingham, Coventry, Wolverhampton and the
+                        West Midlands. Carbon neutral, technology-driven, and locally trusted since 2015.</p>
+                    <div class="hero-badges">
+                        <span class="badge">Community-Award Winner</span>
+                        <span class="badge">Carbon Neutral</span>
+                        <span class="badge">West Midlands Coverage</span>
+                    </div>
+                    <div class="hero-cta">
+                        <a href="#contact" class="btn btn-primary" data-smooth-scroll="#contact">Get Free Quote</a>
+                        <a href="#services" class="btn btn-secondary" data-smooth-scroll="#services">Our Services</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="services">
+            <div class="container">
+                <h2>Professional Gardening Services Across West Midlands</h2>
+                <p class="section-subtitle">Comprehensive garden care solutions for Birmingham, Coventry, Wolverhampton
+                    and surrounding areas</p>
+
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">🌱</div>
+                        <h3>Grass Cutting & Mowing Birmingham</h3>
+                        <p>Professional lawn maintenance across Birmingham and West Midlands with precision cutting and
+                            treatment services. Regular scheduling available for residential properties.</p>
+                        <ul>
+                            <li>Weekly/fortnightly cutting</li>
+                            <li>Lawn treatment programs</li>
+                            <li>Edge trimming included</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">✂️</div>
+                        <h3>Hedge Cutting & Maintenance</h3>
+                        <p>Expert hedge trimming and shaping to keep your boundaries looking pristine year-round.</p>
+                        <ul>
+                            <li>Precision cutting & shaping</li>
+                            <li>Height reduction</li>
+                            <li>Seasonal maintenance</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">🚫</div>
+                        <h3>Weed Control & Management</h3>
+                        <p>Comprehensive weed control including invasive species management using eco-friendly methods.
+                        </p>
+                        <ul>
+                            <li>Invasive weed removal</li>
+                            <li>Preventative treatments</li>
+                            <li>Environmentally safe methods</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">🌿</div>
+                        <h3>Laying Turf</h3>
+                        <p>Professional turf installation for instant lawn transformation. High-quality turf with expert
+                            laying techniques.</p>
+                        <ul>
+                            <li>Premium quality turf supply</li>
+                            <li>Ground preparation included</li>
+                            <li>Aftercare guidance provided</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">💧</div>
+                        <h3>Power Washing Coventry & Birmingham</h3>
+                        <p>High-pressure cleaning services for patios, driveways, decking, and outdoor surfaces across
+                            Coventry, Birmingham and West Midlands. Restore your outdoor spaces to their original
+                            condition.</p>
+                        <ul>
+                            <li>Patio & driveway cleaning</li>
+                            <li>Decking restoration</li>
+                            <li>Fence & wall cleaning</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">🗑️</div>
+                        <h3>Garden Clearance & Disposal</h3>
+                        <p>Complete garden clearance service with responsible waste disposal. Transform overgrown spaces
+                            into clean canvases.</p>
+                        <ul>
+                            <li>Full garden clearance</li>
+                            <li>Green waste removal</li>
+                            <li>Eco-friendly disposal</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="gallery">
+            <div class="container">
+                <h2>See Our Work in Action</h2>
+                <p class="section-subtitle">Dramatic transformations that speak for themselves</p>
+
+                <div class="gallery-grid">
+                    <!-- Power Washing Before/After -->
+                    <div class="gallery-item">
+                        <h3>Power Washing Transformation</h3>
+                        <div class="before-after">
+                            <div class="before">
+                                <img src="images/power-washing-wooden-deck-1.jpg"
+                                    alt="Dirty wooden deck before power washing" loading="lazy" width="300" height="200"
+                                    srcset="images/power-washing-wooden-deck-1.webp 300w, images/power-washing-wooden-deck-1.jpg 600w"
+                                    sizes="(max-width: 600px) 300px, 600px">
+                                <span class="label">Before</span>
+                            </div>
+                            <div class="after">
+                                <img src="images/decking.jpg" alt="Clean, restored wooden deck after power washing"
+                                    loading="lazy" width="300" height="200"
+                                    srcset="images/decking.webp 300w, images/decking.jpg 600w"
+                                    sizes="(max-width: 600px) 300px, 600px">
+                                <span class="label">After</span>
+                            </div>
+                        </div>
+                        <p>Professional power washing restored this patio to its original beauty</p>
+                    </div>
+
+                    <!-- Garden Clearance Before/After -->
+                    <div class="gallery-item">
+                        <h3>Garden Clearance & Restoration</h3>
+                        <div class="before-after">
+                            <div class="before">
+                                <img src="images/overgrown.jpg" alt="Overgrown, messy garden before clearance"
+                                    loading="lazy" width="300" height="200"
+                                    srcset="images/overgrown.webp 300w, images/overgrown.jpg 600w"
+                                    sizes="(max-width: 600px) 300px, 600px">
+                                <span class="label">Before</span>
+                            </div>
+                            <div class="after">
+                                <img src="images/Green-Retreats-Garden-Studi.jpg"
+                                    alt="Clean, cleared garden after professional clearance" loading="lazy" width="300"
+                                    height="200"
+                                    srcset="images/Green-Retreats-Garden-Studi.webp 300w, images/Green-Retreats-Garden-Studi.jpg 600w"
+                                    sizes="(max-width: 600px) 300px, 600px">
+                                <span class="label">After</span>
+                            </div>
+                        </div>
+                        <p>Complete garden clearance transformed this overgrown space into a pristine outdoor area</p>
+                    </div>
+
+                    <!-- Turf Laying Before/After -->
+                    <div class="gallery-item">
+                        <h3>Professional Turf Installation</h3>
+                        <div class="before-after">
+                            <div class="before">
+                                <img src="images/rough_looking_garden.jpg"
+                                    alt="Rough, uneven garden before turf installation" loading="lazy" width="300"
+                                    height="200"
+                                    srcset="images/rough_looking_garden.webp 300w, images/rough_looking_garden.jpg 600w"
+                                    sizes="(max-width: 600px) 300px, 600px">
+                                <span class="label">Before</span>
+                            </div>
+                            <div class="after">
+                                <img src="images/Garden-turfing.jpg"
+                                    alt="Perfect, lush green lawn after professional turf laying" loading="lazy"
+                                    width="300" height="200"
+                                    srcset="images/Garden-turfing.webp 300w, images/Garden-turfing.jpg 600w"
+                                    sizes="(max-width: 600px) 300px, 600px">
+                                <span class="label">After</span>
+                            </div>
+                        </div>
+                        <p>Expert turf laying created this perfect lawn from bare ground in just one day</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about"></section>
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Why Choose Clover View Landscape Designs?</h2>
+                    <div class="features-grid">
+                        <div class="feature">
+                            <h3>🏆 Community-Award Winning</h3>
+                            <p>Recognized excellence in residential garden care with multiple industry awards for
+                                quality and innovation.</p>
+                        </div>
+                        <div class="feature">
+                            <h3>🌍 Carbon Neutral Status</h3>
+                            <p>Committed to environmental responsibility with carbon neutral operations and
+                                eco-friendly practices.</p>
+                        </div>
+                        <div class="feature">
+                            <h3>📍 West Midlands Coverage</h3>
+                            <p>Comprehensive service coverage across the West Midlands region with local expertise.
+                            </p>
+                        </div>
+                        <div class="feature">
+                            <h3>💡 Technology Leaders</h3>
+                            <p>Innovation-driven approach using the latest technology for efficient and precise
+                                garden care.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </section>
+
+        <section class="coverage">
+            <div class="container">
+                <h2>Local Gardening Services Across West Midlands</h2>
+                <p>We proudly serve residential properties across Birmingham, Coventry and the wider West Midlands
+                    region</p>
+
+                <div class="local-areas">
+                    <div class="area-group">
+                        <h3>Birmingham Areas</h3>
+                        <div class="coverage-areas">
+                            <span>Birmingham City Centre</span>
+                            <span>Edgbaston</span>
+                            <span>Moseley</span>
+                            <span>Kings Heath</span>
+                            <span>Harborne</span>
+                            <span>Selly Oak</span>
+                        </div>
+                    </div>
+
+                    <div class="area-group">
+                        <h3>Coventry & Surrounding</h3>
+                        <div class="coverage-areas">
+                            <span>Coventry City Centre</span>
+                            <span>Earlsdon</span>
+                            <span>Canley</span>
+                            <span>Tile Hill</span>
+                            <span>Kenilworth</span>
+                            <span>Warwick</span>
+                        </div>
+                    </div>
+
+                    <div class="area-group">
+                        <h3>West Midlands Towns</h3>
+                        <div class="coverage-areas">
+                            <span>Wolverhampton</span>
+                            <span>Solihull</span>
+                            <span>Walsall</span>
+                            <span>Dudley</span>
+                            <span>West Bromwich</span>
+                            <span>Sutton Coldfield</span>
+                        </div>
+                    </div>
+                </div>
+
+                <p style="margin-top: 2rem; color: #666; text-align: center;">
+                    <strong>Don't see your area?</strong> We cover many more locations across the West Midlands.
+                    <a href="#contact" data-smooth-scroll="#contact"
+                        style="color: #2d5016; text-decoration: underline;">Contact us</a> to check if we
+                    serve your postcode.
+                </p>
+            </div>
+        </section>
+
+        <section id="contact" class="contact" aria-label="Contact Section">
+            <div class="container">
+                <div class="contact-header">
+                    <h2>Book Your Service Today</h2>
+                    <p class="contact-subtitle">Ready to transform your garden? Book your service online or request a
+                        free consultation.</p>
+                </div>
+
+                <div class="booking-tabs">
+                    <button class="tab-btn active" data-tab="booking">Book Service</button>
+                    <button class="tab-btn" data-tab="quote">Get Quote</button>
+                </div>
+            </div>
+
+            <div class="contact-content">
+                <!-- Booking Form -->
+                <div id="booking-form" class="booking-form active">
+                    <form id="bookingForm" name="booking" method="POST" data-netlify="true" netlify-honeypot="bot-field"
+                        aria-label="Book Service Form" autocomplete="on" action="/success.html">
+                        <!-- Hidden fields for Netlify Forms -->
+                        <input type="hidden" name="bot-field" />
+                        <input type="hidden" name="form-name" value="booking" />
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="booking-fullName">Full Name *</label>
+                                <input type="text" id="booking-fullName" name="fullName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="booking-email">Email Address *</label>
+                                <input type="email" id="booking-email" name="email" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="booking-phone">Phone Number *</label>
+                                <input type="tel" id="booking-phone" name="phone" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="booking-address">Property Address *</label>
+                                <input type="text" id="booking-address" name="address" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="booking-service">Service Required *</label>
+                                <select id="booking-service" name="service" required>
+                                    <option value="">Select Service</option>
+                                    <option value="grass-cutting">Grass Cutting & Mowing</option>
+                                    <option value="hedge-cutting">Hedge Cutting & Maintenance</option>
+                                    <option value="weed-control">Weed Control & Management</option>
+                                    <option value="laying-turf">Laying Turf</option>
+                                    <option value="power-washing">Power Washing</option>
+                                    <option value="garden-clearance">Garden Clearance & Disposal</option>
+                                    <option value="multiple">Multiple Services</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="booking-propertySize">Property Size</label>
+                                <select id="booking-propertySize" name="propertySize">
+                                    <option value="">Select Size</option>
+                                    <option value="small">Small (up to 50m²)</option>
+                                    <option value="medium">Medium (50-150m²)</option>
+                                    <option value="large">Large (150-300m²)</option>
+                                    <option value="extra-large">Extra Large (300m²+)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="booking-preferredDate">Preferred Date *</label>
+                                <input type="date" id="booking-preferredDate" name="preferredDate" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="booking-preferredTime">Preferred Time</label>
+                                <select id="booking-preferredTime" name="preferredTime">
+                                    <option value="">Select Time</option>
+                                    <option value="morning">Morning (8AM - 12PM)</option>
+                                    <option value="afternoon">Afternoon (12PM - 5PM)</option>
+                                    <option value="flexible">Flexible</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="booking-frequency">Service Frequency</label>
+                            <select id="booking-frequency" name="frequency">
+                                <option value="">Select Frequency</option>
+                                <option value="one-time">One-time Service</option>
+                                <option value="weekly">Weekly</option>
+                                <option value="fortnightly">Fortnightly</option>
+                                <option value="monthly">Monthly</option>
+                                <option value="seasonal">Seasonal</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="booking-requirements">Additional Requirements</label>
+                            <textarea id="booking-requirements" name="requirements"
+                                placeholder="Please describe any specific requirements, access issues, or additional information..."
+                                rows="4"></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Book Service</button>
+                    </form>
+                </div>
+
+                <!-- Quote Form -->
+                <div id="quote-form" class="quote-form">
+                    <form id="quoteForm" name="quote" method="POST" data-netlify="true" netlify-honeypot="bot-field"
+                        aria-label="Get Quote Form" autocomplete="on" action="/success.html">
+                        <!-- Hidden fields for Netlify Forms -->
+                        <input type="hidden" name="bot-field" />
+                        <input type="hidden" name="form-name" value="quote" />
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="quote-fullName">Full Name *</label>
+                                <input type="text" id="quote-fullName" name="fullName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="quote-email">Email Address *</label>
+                                <input type="email" id="quote-email" name="email" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="quote-phone">Phone Number *</label>
+                                <input type="tel" id="quote-phone" name="phone" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="quote-address">Property Address</label>
+                                <input type="text" id="quote-address" name="address">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Services Interested In *</label>
+                            <div class="checkbox-group">
+                                <label class="checkbox-label" for="quote-grass-cutting">
+                                    <input type="checkbox" id="quote-grass-cutting" name="services"
+                                        value="grass-cutting">
+                                    <span>Grass Cutting & Mowing</span>
+                                </label>
+                                <label class="checkbox-label" for="quote-hedge-cutting">
+                                    <input type="checkbox" id="quote-hedge-cutting" name="services"
+                                        value="hedge-cutting">
+                                    <span>Hedge Cutting & Maintenance</span>
+                                </label>
+                                <label class="checkbox-label" for="quote-weed-control">
+                                    <input type="checkbox" id="quote-weed-control" name="services" value="weed-control">
+                                    <span>Weed Control & Management</span>
+                                </label>
+                                <label class="checkbox-label" for="quote-laying-turf">
+                                    <input type="checkbox" id="quote-laying-turf" name="services" value="laying-turf">
+                                    <span>Laying Turf</span>
+                                </label>
+                                <label class="checkbox-label" for="quote-power-washing">
+                                    <input type="checkbox" id="quote-power-washing" name="services"
+                                        value="power-washing">
+                                    <span>Power Washing</span>
+                                </label>
+                                <label class="checkbox-label" for="quote-garden-clearance">
+                                    <input type="checkbox" id="quote-garden-clearance" name="services"
+                                        value="garden-clearance">
+                                    <span>Garden Clearance & Disposal</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="quote-description">Project Description *</label>
+                            <textarea id="quote-description" name="description"
+                                placeholder="Please describe your garden and what you'd like us to help with..."
+                                rows="4" required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Get Free Quote</button>
+                    </form>
+                </div>
+
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <h3>📞 Call Us</h3>
+                        <p><a href="tel:+447749685518" class="phone-link">+447749685518</a></p>
+                    </div>
+                    <div class="contact-item">
+                        <h3>✉️ Email</h3>
+                        <p>info@cloverviewlandscapedesigns.co.uk</p>
+                    </div>
+                    <div class="contact-item">
+                        <h3>⏰ Operating Hours</h3>
+                        <p>Mon-Fri: 8:00 AM - 6:00 PM<br>
+                            Sat: 8:00 AM - 4:00 PM<br>
+                            Sun: Contracts Only</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Clover View Landscape Designs</h3>
+                    <p>Award-winning residential gardening services across the West Midlands. Carbon neutral and
+                        environmentally conscious.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li>Grass Cutting & Mowing</li>
+                        <li>Hedge Cutting & Maintenance</li>
+                        <li>Weed Control & Management</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Coverage Areas</h4>
+                    <ul>
+                        <li>Birmingham</li>
+                        <li>Coventry</li>
+                        <li>Wolverhampton</li>
+                        <li>And surrounding areas</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Clover View Landscape Designs. All rights reserved. | Carbon Neutral Certified</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
