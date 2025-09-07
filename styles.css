@@ -60,19 +60,24 @@
 .nav-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 5px 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 80px;
+  height: auto;
 }
 
 /* Logo */
+.logo {
+  display: flex;
+  flex-direction: column;
+}
 .logo h1 {
   color: #2d5016;
   font-size: 1.8rem;
   font-weight: 700;
   margin: 0;
+  padding-top: 6px;
 }
 
 .logo .tagline {
@@ -80,7 +85,8 @@
   font-size: 0.9rem;
   color: #666;
   font-weight: 400;
-  margin-top: 0px;
+  margin-top: 4px;
+  line-height: 1.2;
 }
 
 /* Navigation Menu */
@@ -129,11 +135,11 @@
   .nav-menu {
     position: fixed;
     left: -100%;
-    top: 80px;
+    top: 100px;
     flex-direction: column;
     background: white;
     width: 100%;
-    height: calc(100vh - 80px);
+    height: calc(100vh - 100px);
     transition: left 0.3s ease;
     z-index: 10000;
     gap: 0;
@@ -438,10 +444,20 @@ main {
   margin-top: 80px;
   position: relative;
   min-height: 100vh;
-  background: linear-gradient(rgb(230, 235, 227), rgba(45, 80, 22, 0.7)), url("./images/Garden-turfing.jpg") center/cover no-repeat;
+  background: url("./images/Garden-turfing.jpg") center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/* Subtle overlay to improve text contrast */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.25); /* not too dark */
+  z-index: 1;
+  pointer-events: none;
 }
 
 /* Ensure hero image displays on all devices */
@@ -822,7 +838,7 @@ main {
   .nav-menu {
     position: fixed;
     left: -100%;
-    top: 80px;
+    top: 100px;
     flex-direction: column;
     background-color: white;
     width: 100%;
