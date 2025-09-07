@@ -1,21 +1,29 @@
 // Service Worker v3 - force fresh HTML and robust caching
-const CACHE_NAME = 'clover-view-v3';
-const ASSETS_TO_CACHE = [
-  // Use relative paths so this works both at root and subpaths
-  'index.html',
-  'styles.css',
-  'script.js',
-  'scripts/critical.js',
-  'terms.html',
-  'privacy.html',
-  'cookies.html',
-  'favicon.svg',
-  'images/Garden-turfing.webp',
-  'images/Green-Retreats-Garden-Studi.webp',
-  'images/decking.webp',
-  'images/overgrown.webp',
-  'images/rough_looking_garden.webp'
+const CACHE_NAME = 'clover-view-v2';
+const urlsToCache = [
+  '/',
+  '/index.html',
+  '/styles.css',
+  '/script.js',
+  '/images/Garden-turfing.webp',
+  '/images/Green-Retreats-Garden-Studi.webp',
+  '/images/decking.webp',
+  '/images/overgrown.webp',
+  '/images/power-washing-wooden-deck-1.webp',
+  '/images/rough_looking_garden.webp'
 ];
+
+// Add pageshow event listener for bfcache
+self.addEventListener('pageshow', function(event) {
+  if (event.persisted) {
+    // Page was restored from bfcache
+    self.clients.matchAll().then(clients => {
+      clients.forEach(client => {
+        client.postMessage({type: 'BFCACHE_RESTORE'});
+      });
+    });
+  }
+});
 
 self.addEventListener('install', (event) => {
   // Install new cache and activate immediately

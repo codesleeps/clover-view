@@ -444,7 +444,7 @@ main {
   margin-top: 80px;
   position: relative;
   min-height: 100vh;
-  background: url("./images/Garden-turfing.jpg") center/cover no-repeat;
+  background: url("./images/Garden-turfing.webp") center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;

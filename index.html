@@ -2,48 +2,49 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <!-- Google Analytics -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"
-    ></script>
+    <!-- Deferred Google Analytics -->
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-      gtag("config", "G-XXXXXXXXXX", {
-        page_title:
-          "Clover View Landscape Designs - Professional Gardening Services",
-        custom_map: {
-          dimension1: "service_type",
-          dimension2: "location",
-        },
-      });
-
-      // Track form submissions
-      document.addEventListener("DOMContentLoaded", function () {
-        const forms = document.querySelectorAll("form");
-        forms.forEach((form) => {
-          form.addEventListener("submit", function () {
-            gtag("event", "form_submit", {
-              event_category: "engagement",
-              event_label: form.id || "contact_form",
+      window.addEventListener('load', function() {
+        // Load Google Analytics after page load
+        const script = document.createElement('script');
+        script.async = true;
+        script.src = 'https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX';
+        document.head.appendChild(script);
+        
+        script.onload = function() {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-XXXXXXXXXX', {
+            page_title: 'Clover View Landscape Designs - Award-Winning Gardening Services Birmingham, Coventry, West Midlands.',
+            custom_map: {
+              dimension1: "service_type",
+              dimension2: "location",
+            },
+          });
+          
+          // Track form submissions
+          const forms = document.querySelectorAll("form");
+          forms.forEach((form) => {
+            form.addEventListener("submit", function () {
+              gtag("event", "form_submit", {
+                event_category: "engagement",
+                event_label: form.id || "contact_form",
+              });
             });
           });
-        });
 
-        // Track phone number clicks
-        const phoneLinks = document.querySelectorAll('a[href^="tel:"]');
-        phoneLinks.forEach((link) => {
-          link.addEventListener("click", function () {
-            gtag("event", "phone_click", {
-              event_category: "engagement",
-              event_label: "phone_contact",
+          // Track phone number clicks
+          const phoneLinks = document.querySelectorAll('a[href^="tel:"]');
+          phoneLinks.forEach((link) => {
+            link.addEventListener("click", function () {
+              gtag("event", "phone_click", {
+                event_category: "engagement",
+                event_label: "phone_contact",
+              });
             });
           });
-        });
+        };
       });
     </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -151,18 +152,28 @@
         margin-top: 80px;
         position: relative;
         min-height: 100vh;
-        background: url("./images/Garden-turfing.jpg") center/cover no-repeat;
+        background: url("images/Garden-turfing.webp") center/cover no-repeat;
         display: flex;
         align-items: center;
         justify-content: center;
       }
 
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.25);
+        z-index: 1;
+        pointer-events: none;
+      }
+
       .hero-content {
         position: relative;
         z-index: 2;
-        max-width: 1200px;
-        padding: 0 20px;
         text-align: center;
+        color: white;
+        max-width: 800px;
+        padding: 0 20px;
       }
 
       .hero-text h1 {
@@ -191,8 +202,9 @@
     <link
       rel="preload"
       as="image"
-      href="images/Garden-turfing.jpg"
+      href="images/Garden-turfing.webp"
       fetchpriority="high"
+      type="image/webp"
     />
     <link rel="preload" href="styles.css" as="style" />
 
