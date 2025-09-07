@@ -80,7 +80,7 @@
   font-size: 0.9rem;
   color: #666;
   font-weight: 400;
-  margin-top: -5px;
+  margin-top: 0px;
 }
 
 /* Navigation Menu */
@@ -438,28 +438,17 @@ main {
   margin-top: 80px;
   position: relative;
   min-height: 100vh;
-  background: linear-gradient(rgba(45, 80, 22, 0.7), rgba(45, 80, 22, 0.7)), url("./images/Garden-turfing.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  background: linear-gradient(rgb(230, 235, 227), rgba(45, 80, 22, 0.7)), url("./images/Garden-turfing.jpg") center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
-  will-change: transform;
 }
 
 /* Ensure hero image displays on all devices */
-@media (min-width: 769px) {
-  .hero {
-    background-attachment: fixed;
-  }
-}
 
 /* Tablet specific hero styling */
 @media (min-width: 481px) and (max-width: 1024px) {
   .hero {
-    background-attachment: scroll;
     background-size: cover;
     background-position: center center;
   }
@@ -468,13 +457,12 @@ main {
 /* Desktop hero optimization */
 @media (min-width: 1025px) {
   .hero {
-    background-attachment: fixed;
     background-size: cover;
     background-position: center center;
   }
 }
 
-.hero-overlay {
+/* .hero-overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -482,7 +470,7 @@ main {
   bottom: 0;
   background: rgba(45, 80, 22, 0.7);
   z-index: 1;
-}
+} */
 
 .hero-content {
   position: relative;
