@@ -125,6 +125,55 @@ function initBackToTop() {
   });
 }
 
+// Update form submission for Hostinger
+function handleFormSubmission(form, isQuoteForm = false) {
+  form.addEventListener('submit', async function(e) {
+    e.preventDefault();
+    
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const originalText = submitBtn.textContent;
+    
+    // Show loading state
+    submitBtn.textContent = 'Sending...';
+    submitBtn.disabled = true;
+    
+    try {
+      const formData = new FormData(form);
+      const data = Object.fromEntries(formData.entries());
+      
+      // Handle checkbox services for quote form
+      if (isQuoteForm) {
+        const services = formData.getAll('services');
+        data.services = services.join(', ');
+      }
+      
+      const response = await fetch('/contact-handler.php', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data)
+      });
+      
+      const result = await response.json();
+      
+      if (response.ok && result.success) {
+        // Redirect to success page
+        window.location.href = '/success.html';
+      } else {
+        throw new Error(result.error || 'Failed to send message');
+      }
+    } catch (error) {
+      console.error('Form submission error:', error);
+      alert('Sorry, there was an error sending your message. Please try again or contact us directly.');
+    } finally {
+      // Reset button
+      submitBtn.textContent = originalText;
+      submitBtn.disabled = false;
+    }
+  });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   // Initialize hamburger menu
   const hamburger = document.getElementById("hamburger");
