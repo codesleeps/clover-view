@@ -1,0 +1,36 @@
+{
+  "name": "Clover View Landscape Designs",
+  "short_name": "Clover View",
+  "description": "Award-Winning™ Gardening Services Birmingham, Coventry, West Midlands",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2d5016",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en-GB",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["business", "lifestyle", "home"],
+  "screenshots": [],
+  "shortcuts": [
+    {
+      "name": "Book Service",
+      "short_name": "Book",
+      "description": "Book a gardening service",
+      "url": "/#contact"
+    },
+    {
+      "name": "Our Services",
+      "short_name": "Services",
+      "description": "View our gardening services",
+      "url": "/#services"
+    }
+  ]
+}
