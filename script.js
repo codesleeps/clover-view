@@ -270,4 +270,42 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
+
+  // Form submission handler for PHP backend
+  function handleFormSubmit(formId) {
+    const form = document.getElementById(formId);
+    if (!form) return;
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      
+      const formData = new FormData(form);
+      const data = Object.fromEntries(formData.entries());
+      
+      try {
+        const response = await fetch('contact-handler.php', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data)
+        });
+        
+        const result = await response.json();
+        
+        if (result.success) {
+          window.location.href = '/success.html';
+        } else {
+          alert('Error: ' + (result.error || 'Failed to submit form'));
+        }
+      } catch (error) {
+        console.error('Form submission error:', error);
+        alert('An error occurred. Please try again or contact us directly.');
+      }
+    });
+  }
+
+  // Initialize form handlers
+  handleFormSubmit('bookingForm');
+  handleFormSubmit('quoteForm');
 });

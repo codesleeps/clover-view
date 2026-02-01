@@ -28,7 +28,7 @@ self.addEventListener('pageshow', function(event) {
 self.addEventListener('install', (event) => {
   // Install new cache and activate immediately
   event.waitUntil(
-    caches.open(CACHE_NAME).then((cache) => cache.addAll(ASSETS_TO_CACHE))
+    caches.open(CACHE_NAME).then((cache) => cache.addAll(urlsToCache))
   );
   self.skipWaiting();
 });
